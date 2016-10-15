@@ -1,0 +1,28 @@
+.top-view{
+    display:flex;
+    justify-content: space-between;
+}
+.top-view .top-view__button{
+    border-radius:100rpx;
+ 
+    padding:4rpx;
+}
+.calendar-week{
+    background-color:#eee;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.calendar-day{
+    /*justify-content: space-between;*/
+    width:14.2%;
+    padding:30rpx 0;
+    text-align: center;
+    background-color:white;
+    margin-right:1px;
+    margin-top:1px;
+}
+.calendar-day:hover{
+    background-color:lightblue;
+}
+.fullCalendar-body{border-bottom:1px solid #eee;}

@@ -1,0 +1,12 @@
+<!--calendar class template-->
+<template name="fullCalendar">
+    <view class="fullCalendar-body">
+        <view wx:for="{{calendar.weeks}}" wx:for-item="week">
+            <view class="calendar-week">
+                <block wx:for="{{week}}" wx:for-item="day" wx:for-index="idx">
+                    <view bindtap="daytap" data-idx="{{index}},{{idx}}" class="calendar-day mute{{day[0]}}">{{day[0]}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+</template>
