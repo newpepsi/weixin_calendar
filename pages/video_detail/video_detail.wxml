@@ -1,0 +1,6 @@
+<view class="video-page">
+    <view class="danmu-text" animation="{{animation}}" style="">{{danmu_text}}</view>
+    <video id="player" style="width:100%;" src="{{video.video}}" poster="{{video.cover}}"></video>
+    <textarea bindblur="danmu_blur" class="danmu-input"></textarea>
+    <button bindtap="send_danmu" class="btn-primary">发送弹幕</button>
+</view>

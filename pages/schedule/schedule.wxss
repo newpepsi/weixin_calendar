@@ -1,16 +1,32 @@
 .fullcalendar-header{
     display:flex;
     justify-content: space-between;
+    
 }
 .fullcalendar-header .fullcalendar-header__button{
     background-color:transparent;
     line-height:1; 
     padding:6rpx;
 }
+
 .fullcalendar-header .fullcalendar-header__button:hover{
     background-color:#eee;
 }
-
+.calendar-week.calendar-week-header{
+    background-color:dodgerblue;
+    font-size:12px;
+}
+.calendar-week.calendar-week-header .calendar-day{
+    /*justify-content: space-between;*/
+    width:14.2%;
+    padding:30rpx 0;
+    text-align: center;
+    background-color:dodgerblue;
+    color:white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right:1px;
+    margin-top:1px;
+}
 .calendar-week{
     background-color:#eee;
     display:flex;
@@ -18,7 +34,7 @@
     justify-content: space-between;
 }
 .calendar-day{
-    /*justify-content: space-between;*/
+    /* justify-content: space-between; */
     width:14.2%;
     padding:30rpx 0;
     text-align: center;

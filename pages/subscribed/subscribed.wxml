@@ -1,0 +1,6 @@
+<block wx:for="{{videos}}">
+<navigator url="../video_detail/video_detail?id={{item.id}}">
+    <image class="video-cover" src="{{item.cover}}@1e_{{device_width}}w_{{pic_height}}h_1c_0i_1o_100Q_1x.jpg"
+    style="width:100%;height:{{pic_height}}px"/>
+</navigator>
+</block>

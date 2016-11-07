@@ -1,6 +1,11 @@
 <!--calendar class template-->
 <template name="fullCalendar">
     <view class="fullCalendar-body">
+        <view class="calendar-week calendar-week-header">
+            <block wx:for="{{calendar.days}}" wx:for-item="day">
+                <view class="calendar-day">{{day}}</view>
+            </block>
+        </view>
         <view wx:for="{{calendar.weeks}}" wx:for-item="week">
             <view class="calendar-week">
                 <block wx:for="{{week}}" wx:for-item="day" wx:for-index="idx">

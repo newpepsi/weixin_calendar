@@ -2,12 +2,14 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/schedule/schedule"
+    "pages/schedule/schedule",
+    "pages/subscribed/subscribed",
+    "pages/video_detail/video_detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "匠子",
+    "navigationBarTextStyle":"white"
   }
 }

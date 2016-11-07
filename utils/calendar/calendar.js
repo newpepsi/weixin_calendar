@@ -18,6 +18,7 @@ function getDaysInMonth( month, year ) {
     }
     return days;
 }
+var week_lang = ['周日','周一','周二','周三','周四','周五','周六']
 
 class Calendar {
     // """
@@ -28,16 +29,19 @@ class Calendar {
     constructor( firstweekday = 0 ) {
         this.firstweekday = firstweekday //# 0 = Sunday, 6 = Saturday
     }
-
+    getweekheader(){
+        return this.weekdays().map(function(i){ return week_lang[i]})
+    }
     weekdays() {
         // """
         // Return a iterator for one week of weekday numbers starting with the
         // configured first one.
         // """
         var i = null
-        util.range( this.firstweekday, this.firstweekday + 7 ).map( function( i ) {
+        return util.range( this.firstweekday, this.firstweekday + 7 ).map( function( i ) {
             return i % 7
         })
+        
         // for( i in util.range( this.firstweekday, this.firstweekday + 7 )){
         //     yield i % 7
         // }
@@ -48,7 +52,7 @@ class Calendar {
         // objects and will always return complete weeks, so it will provide
         // dates outside the specified month.
         // """
-        console.log( year, month )
+        // console.log( year, month )
         var local_month = month - 1
         var date = new Date( year, local_month, 1 )
         var loop = true
@@ -131,7 +135,7 @@ class Calendar {
         // are zero.
         // """
         var days = this.monthdays2( year, month )
-        console.log( util.range( 0, days.length, 7 ) )
+        // console.log( util.range( 0, days.length, 7 ) )
         return util.range( 0, days.length, 7 ).map( function( x ) {
             // console.log( days.slice( x, x + 7 ) )
             return days.slice( x, x + 7 )
