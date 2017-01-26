@@ -22,7 +22,9 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     this.date = new Date()
     this.cal = new calendar.Calendar()
-    let dates = this.cal.monthdays2calendar(2016, 10)
+    let current_year = this.date.getFullYear()
+    let current_month = this.date.getMonth()+1
+    let dates = this.cal.monthdays2calendar(current_year, current_month)
     console.log(this.cal.getweekheader())
     console.log('dates', dates)
     this.setData({
@@ -87,5 +89,12 @@ Page({
     let week = pos[0], day = pos[1]
     let dat = this.data.cal1.calendar.weeks[week][day]
     console.log('day clicked', dat)
+    wx.showModal({
+      title: '点击了一个日期',
+      content:'您选择的日期为:'+util.formatTime(dat[dat.length-1]),
+      showCancel:false,
+      icon: 'success',
+      duration: 2000
+    })
   }
 })
