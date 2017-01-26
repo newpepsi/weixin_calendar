@@ -7,10 +7,10 @@
   <view class="html">{{html}}</view>
   <view class="text">{{segment}}</view>
   <navigator url="../schedule/schedule" style="z-index:99;">
-    <button type="default">我的日历</button>
+    <button type="default">日期控件演示-日历</button>
   </navigator>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-  <view style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:#2e2e2e;" ></view>
+  <view style="position:absolute;left:0;top:0;width:100%;height:100%;" ></view>
 </view>
